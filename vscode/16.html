@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .aa{
+            padding: 40px;
+            border:4px solid red;
+            /* position: relative; */
+        }
+        .bb{
+            padding: 40px;
+            border: 4px solid red;
+        }
+        .cc{
+            padding: 40px;
+            border: 4px solid red;
+            /* position: relative; */
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .wrap{
+            width: 300px;
+            margin:10px;
+            border: 1px solid blue;
+            position: relative;
+        }
+        .wrap .col{
+            padding: 20px;
+        }
+        .wrap .col-pic img{
+            width: 100%;
+        }
+        .wrap .col-txt{
+            margin: 10px 0;
+        }
+        .wrap .iframe{
+            width: 50px;
+            height: 40px;
+            background-color: red;
+        }
+        .wrap .mark{
+            width: 50px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top:0px;
+            right: 0px;
+            background-color: green;
+            color: white;
+            /* border-radius: 50% 0; */
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .arrow{
+            margin:100px;
+            width: 0px;
+            height: 0px;
+            border-top: 40px solid transparent;
+            /* border-right: 40px solid gray; */
+            /* border-bottom:  40px solid transparent; */
+            border-left: 40px solid blue ;
+        }
+    </style>
+</head>
+<body>
+    <div class="aa">
+        <div class="bb">
+            <div class="cc">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">  
+        <div class="mark">sale</div>    
+        <div class="col">
+            <div class="col-pic"><img src="https://picsum.photos/id/237/200/150" alt=""></div>
+            <div class="col-txt">                
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, optio!</p>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>       
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .wrap{
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .col{
+            background-color: wheat;
+            padding: 10px;
+            margin: 10px;   
+        }
+        @media screen and (min-width: 768px){
+            .wrap{
+                display: flex;
+            }
+            .col{
+                width: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="col">
+            <h3>title</h3>
+            <p>Loremt consectetur adipisicing elit. Ea, autem exercitationem unde cupiditate alias fugit at eaque quidem ipsam nam!</p>
+        </div>
+        <div class="col">
+            <h3>title</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, autem exercitationem unde cupiditate alias fugit at eaque quidem ipsam nam!</p>
+        </div>
+        <div class="col">
+            <h3>title</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, autem exercitationem unde cupiditate alias fugit at eaque quidem ipsam nam!</p>
+        </div>
+    </div>
+    
+</body>
+</html>

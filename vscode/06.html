@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .banner img{
+            width: 100%;
+        }
+        .item-group{
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .item{
+            margin: 10px 20px;
+        }
+        .title{
+            margin: 20px 0 20px;
+            padding: 10px 60px 20px;
+            background-color: burlywood;
+        }
+        .title>h3{
+             text-align: center;
+             font-size: 42px;
+        }
+        .title>p{
+            text-align: center;
+            font-size: 20px;
+        }
+        .item{
+            margin: 0 0 40px;
+            background-color: cadetblue;
+        }
+        .item .pic{
+            padding: 20px 40px ;
+        }
+        .item .pic img{
+            width: 100%;
+        }
+        .item .text{
+            background-color: #aaa;
+            margin: 10px 40px 30px;
+            padding: 10px 20px 40px;
+        
+        }
+        .item .text>h3{
+            text-align: center;
+            font-size: 30px;
+        }
+        .item .text>p{
+            text-align: center;
+            font-size: 20px;
+        }
+        .service .item{
+            background-color: burlywood;
+        }
+
+        .footer{
+            background-color:black;
+            color: #aaa;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px 0;
+        }
+        @media screen  and (min-width: 768px){
+            .item-group{
+                display: flex;
+            }
+            
+            .service .item{
+                display: flex;
+            }
+            .service .pic,
+            .service .text{
+                width: 50%;
+                margin: 0%;
+                padding: 0 20px;
+            }
+            .service .text{
+                padding: 10px 30px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="https://picsum.photos/seed/picsum/1400/500" alt="">
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h3>關於我們 </h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, deleniti. Tempora eius asperiores fugiat autem dolores labore illum ut ullam?</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="item pic">
+                        <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                    </div>
+                    <div class="item text">           
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nobis quasi officiis corporis? Sunt et inventore ipsam amet ullam repudiandae!</p>
+                    </div>    
+                </div>
+                <div class="item">
+                    <div class="item pic">
+                        <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                    </div>
+                    <div class="item text">           
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nobis quasi officiis corporis? Sunt et inventore ipsam amet ullam repudiandae!</p>
+                    </div>    
+                </div>
+                <div class="item">
+                    <div class="item pic">
+                        <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                    </div>
+                    <div class="item text">           
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nobis quasi officiis corporis? Sunt et inventore ipsam amet ullam repudiandae!</p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service">
+        <div class="item">
+            <div class="item pic">
+                <img src="https://picsum.photos/100/100?grayscale" alt="">
+            </div>
+            <div class="item text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet dicta illo harum doloribus iure dolore aut quod. Voluptatem, quo id.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>copyright@kane</p>
+    </div>
+</body>
+</html>

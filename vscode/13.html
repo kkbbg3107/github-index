@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+        .box{
+            width: 200px;
+            height: 300px;
+            background-color: #000;
+        }
+        .box img{
+            width: 100%;
+            opacity: 1;
+            transition: .5s;
+        }        
+        .box img:hover{    
+            opacity: .5;
+        }
+        .group{
+            width: 900px;
+            height: 600px;
+            background-color: #ccc;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin: 2px;
+            font-size: 40px;
+            color: white;
+        }
+        .item:nth-child(1){
+            margin-right: auto;
+        } 
+        .item:nth-child(2){
+            margin-left: auto;
+            margin-right: auto;            
+        } 
+        .item:nth-child(3){
+            margin-left: auto;
+        }
+
+
+        .about{
+            width: 900px;
+            margin: auto;
+        }
+        .about .col {            
+            display: flex;
+            padding: 50px;
+        }
+        .col .col-pic,.col .col-txt{
+            width: 450px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .col .col-pic img{
+            width: 100%;
+        }
+        .col + .col{
+            border-top: 1px solid red;
+        } 
+        /* 家分隔線 */
+        .about .col:nth-child(even){
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://picsum.photos/seed/picsum/200/300">
+    </div>
+
+    <div class="group">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="about">
+        <div class="col">
+            <div class="col-pic">
+                <img src="https://picsum.photos/200/150" alt="">
+            </div>
+            <div class="col-txt">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, temporibus.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-pic">
+                <img src="https://picsum.photos/200/150" alt="">
+            </div>
+            <div class="col-txt">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, temporibus.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-pic">
+                <img src="https://picsum.photos/200/150" alt="">
+            </div>
+            <div class="col-txt">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, temporibus.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .header {
+            background-color: #aaa;
+            height: 50px;
+            position: relative;
+        }
+        .logo {
+            height: 50px;
+            width: 60px;
+        }
+        #menu_control{
+            position: absolute;
+            opacity: 0;
+        }
+        .logo img {
+            vertical-align: bottom;
+        }
+
+        .menu_btn {
+            width: 50px;
+            height: 40px;
+            display: block;
+            background-color: rgb(10, 6, 6);
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 10px;
+        }
+        .menu_btn span{
+            opacity: 0;
+        }
+
+        .menu_btn::before { 
+            content: "";
+            position: absolute;
+            height: 2px;
+            left: 7px;
+            width: 36px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: #aaa;
+            box-shadow: 0px 8px 0px #aaa,
+                0px -8px 0px #aaa;
+        }
+        nav{
+            background-color: blanchedalmond
+            /* width:60%
+            height:calc(100vh - 50px)
+            position:absolute */
+            /* top:50px */
+            /* left:-100% */
+        }
+        nav a{
+            display: block;
+            text-decoration: none;
+            color: coral;
+            padding: 10px 20px;
+            border-bottom: 1px solid coral;
+            transition: 1s;
+        }
+        nav a:hover{
+            background-color: chocolate;
+        }
+        #menu_control:checked~ .header nav{
+            left: 0;
+        }
+        @media screen and (min-width: 768px){
+            .menu_btn{
+                display: none;
+            }
+            .header{
+                display: flex;
+                justify-content: space-between;
+                background-color: #aaa;
+            }
+            nav{
+                display: flex;
+                left: 0;
+                top: 0;
+                background-color: #aaa;
+                width: auto;
+                height: auto;
+                position: relative;
+            }
+            nav a{
+                border-bottom: none;
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h2 class="logo">
+            <a href="#">
+                <img src="https://picsum.photos/60/40/?blur=2" alt="">
+            </a>
+            <label for="menu_control" class="menu_btn">
+                <span>
+                    點我打勾
+                </span>
+            </label>
+        </h2>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+
+</body>
+
+</html>
