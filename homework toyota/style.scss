@@ -57,7 +57,7 @@ body {
 }
 
 .col h1{
-    
+    font-size: 50px;
     width: 350px;
     height: 130px;
     color: white;
@@ -66,7 +66,14 @@ body {
     background-color: #af0000;
     position: relative;
     left: -10px;
-    top:-30px;
+    top:-43px; 
+    display: flex; 
+    .rotate{
+        writing-mode: vertical-lr;
+        font-size: 80px;
+        position: relative;
+        top: 10px;
+    }
 }
 
 .col p::before{
@@ -144,7 +151,9 @@ body {
 
 }
 .operation .col:nth-of-type(2){    
-    margin:auto;
+    margin:auto;        
+    position: relative;
+    top: -25px;
     .viedo{
         position: relative;
         left: 660px;
@@ -169,6 +178,8 @@ body {
 .operation .col img{
     width: 100%;
     height: 100%;
+    position: relative;
+    top: -42px;
 }
 
 .col .viedo{
@@ -182,7 +193,7 @@ body {
 
 .operation .col:nth-of-type(3){
     position: relative;
-    top: -33px;
+    top: -40px;
 }
 
 .operation .col:nth-of-type(4){
@@ -195,7 +206,7 @@ body {
 .safety .col:nth-of-type(1){
     position: relative;
     top: -285px;
-    margin-left: 610px;
+    margin-left: 610px;    
 }
 
 .safety .col:nth-of-type(2){
@@ -275,7 +286,7 @@ body {
     width: 500px;
     height: 288px; 
     position: relative;;
-    top: -777px;
+    top: -805px;
     left: 460px;
 
 }
