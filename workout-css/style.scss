@@ -44,12 +44,14 @@
         }
         
         ul{
-            position: absolute;
+            position: absolute;            
             z-index: -1;
             top: 240px;        
             order:3;      
             width:250px;
             color:hsla(30, 60%, 60%, 1);
+            display: block;
+
         }
 
         &:hover{
@@ -58,7 +60,8 @@
             }
             ul{                 
                 z-index: 2;
-                top: 0;
+                top: 40px;
+                line-height: 25px;
                 transition: 1s;
             }       
         }
