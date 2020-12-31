@@ -1,5 +1,4 @@
 [
-    {
         { "id":"A001","color":"太空灰色","storage":"64GB","network":"Wi-Fi","price":18900,"picture":""},
         { "id":"A001","color":"銀色","storage":"64GB","network":"Wi-Fi","price":18900,"picture":""},
         { "id":"A001","color":"玫瑰金色","storage":"64GB","network":"Wi-Fi","price":18900,"picture":""},
@@ -20,6 +19,5 @@
         { "id":"D003","color":"玫瑰金色","storage":"256GB","network":"Cellular","price":28200,"picture":""},
         { "id":"D004","color":"綠色","storage":"256GB","network":"Cellular","price":28200,"picture":""},
         { "id":"D005","color":"天藍色","storage":"256GB","network":"Cellular","price":28200,"picture":""},
-        
-    }
+
 ]
