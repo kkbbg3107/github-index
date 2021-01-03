@@ -1,0 +1,287 @@
+@media screen and (min-width: 768px) {
+    .col-md-1 {
+        width: 8.333333%;
+    }
+
+    .col-md-2 {
+        width: 16.666666%;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-4 {
+        width: 33.333333%;
+    }
+
+    .col-md-5 {
+        width: 41.666666%;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-7 {
+        width: 58.333333%;
+    }
+
+    .col-md-8 {
+        width: 66.666666%;
+    }
+
+    .col-md-9 {
+        width: 75%;
+    }
+
+    .col-md-10 {
+        width: 83.333333%;
+    }
+
+    .col-md-11 {
+        width: 91.666666%;
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+/* 平板 */
+@media screen and (min-width: 768px) {
+
+    h1 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+
+    }
+
+
+    nav {
+        height: 100px;
+    }
+
+    h3 {
+        color: #000;
+    }
+
+    .menu_btn {
+        left: -100%;
+    }
+
+    .page {
+        height: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .nav-icon .icon {
+        font-size: 30px;
+    }
+
+    .page a {
+        border-bottom: none;
+        font-size: 24px;
+
+    }
+
+    .page a:hover {
+        background-color: transparent;
+    }
+
+    .banner-data h2 {
+        margin: 50px;
+    }
+
+    .about-item {
+        display: flex;
+    }
+
+    .about-pic {
+        width: 20%;
+        margin: auto;
+    }
+
+    .about-txt {
+        width: 80%;
+        text-align: left;
+    }
+
+    .email-input input {
+        padding: 10px;
+    }
+
+    .footer .footer-contact {
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .footer .footer-contact a {
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .col-xl-1 {
+        width: 8.333333%;
+    }
+
+    .col-xl-2 {
+        width: 16.666666%;
+    }
+
+    .col-xl-3 {
+        width: 25%;
+    }
+
+    .col-xl-4 {
+        width: 33.333333%;
+    }
+
+    .col-xl-5 {
+        width: 41.666666%;
+    }
+
+    .col-xl-6 {
+        width: 50%;
+    }
+
+    .col-xl-7 {
+        width: 58.333333%;
+    }
+
+    .col-xl-8 {
+        width: 66.666666%;
+    }
+
+    .col-xl-9 {
+        width: 75%;
+    }
+
+    .col-xl-10 {
+        width: 83.333333%;
+    }
+
+    .col-xl-11 {
+        width: 91.666666%;
+    }
+
+    .col-xl-12 {
+        width: 100%;
+    }
+
+    .nav-icon .phone {
+        display: block;
+        font-size: 24px;
+        color: #fff;
+        transform: translateY(20px);
+    }
+
+    .nav-icon .icon {
+        display: none;
+    }
+
+    h1{
+        left: 10%;
+    }
+
+    .page {
+        position: absolute;
+        bottom: 50px;
+        top: 10px;
+        justify-content: center;
+    }
+
+
+
+    .info .row {
+        display: flex;
+    }
+
+
+    .info .info-intro {
+        text-align: left;
+        padding: 15px;
+    }
+
+    .info .info-intro p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .info .info-intro .button-area {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .about .row {
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid red; */
+    }
+
+    .about .row .col-xl-6 {
+        width: 50%;
+        /* border: 1px solid blue; */
+    }
+
+    .multi .row {
+        display: flex;
+    }
+
+    .multi-txt {
+        transform: translateY(80px);
+    }
+
+    .email-check {
+        height: 60px;
+    }
+
+    .email-check .email-input input {
+        height: 40px;
+    }
+
+    .email-button {
+        width: 50%;
+    }
+
+    .email-button button {
+        position: relative;
+        top: 10px;
+        height: 60px;
+    }
+
+    .email-input {
+        width: 50%;
+    }
+
+    .email-check {
+        display: flex;
+
+    }
+
+    .footer .row {
+        display: flex;
+    }
+
+    .footer-title {
+        margin: 20px;
+    }
+
+    .footer .footer-icon {
+        border-bottom: none;
+    }
+
+    .footer-contact {
+        width: 100%;
+    }
+}
