@@ -1,0 +1,53 @@
+h1{
+    margin: 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+
+.button-group{
+    width: 40%;
+    display: flex;
+    margin: 20px;
+    /* border: 1px saddlebrown solid; */
+}
+
+.button-group button{
+    width: 0;
+    flex-grow: 1;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 10px;
+}
+
+.card-title {
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.card-body:hover{
+    transition: .5s;
+    /* background: radial-gradient(#e66465, #9198e5); */
+    background: radial-gradient(closest-corner at 40% 40%,#77E3FC,#62D2EE,#BA1300,#F55900,#FF9A1B);
+}
+
+
+span {    
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.card-body .btn_detail{
+    width: 80px;
+    font-family: 'Noto Sans TC', sans-serif;
+    display: flex;
+    flex-direction: column;   
+    color: #fff;
+    background-color: #4098E6;  
+    text-align: center;   
+}
