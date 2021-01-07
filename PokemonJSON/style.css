@@ -27,14 +27,27 @@ h1{
 }
 
 .card-title {
+    color: transparent;
     text-align: center;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.card-body:hover{
+.card-body:hover .card-title{
+    color: #ff0;
+    
+    
+}
+.card-body{
+    background: radial-gradient(closest-corner at 40% 40%,#77E3FC,#62D2EE,#BA1300,#F55900,#FF9A1B);
+}
+
+.card-body img{
+    filter: brightness(0);
+}
+.card-body:hover img{
     transition: .5s;
     /* background: radial-gradient(#e66465, #9198e5); */
-    background: radial-gradient(closest-corner at 40% 40%,#77E3FC,#62D2EE,#BA1300,#F55900,#FF9A1B);
+    filter: brightness(100%);
 }
 
 

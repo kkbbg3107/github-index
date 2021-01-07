@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        .wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input-group {
+            padding: 20px;
+            width: 350px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            /* align-items: center; */
+            /* align-content: center;   */
+
+        }
+
+        button {
+            width: 100px;
+            margin: 20px 0px;
+            border: none;
+
+        }
+
+        button:focus {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>生命靈數免費算</h1>
+        <div class="input-group">
+            <input type="date" id='datetimepicker'>
+            <button id="submit">確認</button>
+        </div>
+        <div id="constellation">你的星座:</div>
+        <div id="num">你的生命靈數:</div>
+        <div id="num-content">生命靈數解析:</div>
+
+    </div>
+
+
+
+
+    <script>
+        let enArray = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo",
+            "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn"
+        ];
+        let reducer = (accumulator, currentValue) => accumulator + currentValue; //靈數加總
+        let count_num; //計算靈數
+        let count_Array; //轉陣列
+        let i; //放星座
+        let n; //放靈數
+        let constellation = ''; //放星座
+        
+        let content = document.getElementById('num-content');
+        let btn = document.getElementById('submit');
+        let Constellationarray = ["魔羯", "水瓶", "雙魚", "牡羊", "金牛", "雙子", "巨蟹", "獅子", "處女", "天秤", "天蠍", "射手", "魔羯"];
+
+        btn.addEventListener('click', function () { //綁定事件
+            // 抓日期的值 
+            let number = document.getElementById('num');           
+            let Cons = document.getElementById('constellation');
+            let dateValue = document.getElementById('datetimepicker').value;
+            let life_day = new Date(dateValue);
+            let day = life_day.getDate();
+            let month = life_day.getMonth() + 1;            
+            count();
+            countConstellation(month, day);
+            i = Constellationarray.indexOf(constellation);
+            console.log(i);
+            Cons.innerHTML=`${constellation}`;
+            number.innerHTML=`${n}`;
+            getJSON();
+        })
+
+
+        function getJSON() { //傳資料
+            let url =
+                `http://buildschoolapi.azurewebsites.net/api/number/GetNumerology?constellation=${enArray[i]}&number=${n}`;
+            let request = new Request(url);
+            fetch(request)
+                .then((response) => response.text())
+                .then(result => {
+                    document.getElementById('num-content').innerHTML = result;
+                })
+                .catch(ex => {
+                    document.getElementById('num-content').textContent = ex;
+                });
+        }
+
+
+
+        //判斷星座
+        function countConstellation(month, day) {
+            let s = "魔羯水瓶雙魚牡羊金牛雙子巨蟹獅子處女天秤天蠍射手魔羯";
+            let arr = [20, 19, 21, 21, 21, 22, 23, 23, 23, 23, 22, 22];
+            constellation = s.substr(month * 2 - (day < arr[month - 1] ? 2 : 0), 2);
+        }
+
+
+
+
+        //計算靈數
+        function count() {
+
+
+            count_num = document.getElementById('datetimepicker').value;
+            count_Array = count_num.split(''); //把陣列變成每個數字分開+"-"
+            count_Array = count_Array.filter(x => isNumber(x));
+
+            while (count_Array.length > 1) {
+                c = count_Array.map(Number).reduce(reducer);
+                count_Array = Array.from(c.toString());
+            }
+            n = count_Array[0]; //靈數
+        }
+
+        function isNumber(input) {
+            if (parseFloat(input).toString() == "NaN") {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
