@@ -96,7 +96,7 @@
 
         function getJSON() { //傳資料
             let url =
-                `http://buildschoolapi.azurewebsites.net/api/number/GetNumerology?constellation=${enArray[i]}&number=${n}`;
+                `https://buildschoolapi.azurewebsites.net/api/number/GetNumerology?constellation=${enArray[i]}&number=${n}`;
             let request = new Request(url);
             fetch(request)
                 .then((response) => response.text())
